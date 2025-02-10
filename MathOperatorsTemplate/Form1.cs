@@ -25,17 +25,20 @@ namespace MathOperatorsTemplate
         private void runButton_Click(object sender, EventArgs e)
         {
             // 1. Declare a string variable, put your name in it, display it
-
+            string myName = "Mr. T";
+            outputLabel.Text = myName;
 
             // 2. Declare an integer variable, put your age in it, display it
-
+            int age = 24;
+            outputLabel.Text += $"\nMy age is {age}";
 
             // 3. Declare a double variable, put a decimal number, display it
-
+            double pi = 3.14159;
+            outputLabel.Text += $"\n{pi}";
 
             /// 4. Combine a text with a variable to display: 
             ///   "Hello" followed by your name (e.g. Hello Mr. T)
-
+            outputLabel.Text += $"\nHello {myName}";
 
             /// 5. Simple arithmetic is done by using the +, -, * and /, 
             /// (plus, minus, times and divide). Results of mathematical
@@ -49,12 +52,23 @@ namespace MathOperatorsTemplate
             /// 
             /// 6 - 4 = 2
 
-            //int x = 6;
-            //int y = 4;
-            //int answer = x + y;
+            int x = 4;
+            int y = 4;
+            int answer = x + y;
 
-            //outputLabel.Text += $"\n\nx + y = {answer}";
+            outputLabel.Text += $"\n\n{x} + {y} = {answer}";
 
+            answer = x - y;
+            outputLabel.Text += $"\n{x} - {y} = {answer}";
+
+            answer = x * y;
+            outputLabel.Text += $"\n{x} * {y} = {answer}";
+
+            answer = x / y;
+            outputLabel.Text += $"\n{x} / {y} = {answer}";
+
+            answer = x % y;
+            outputLabel.Text += $"\n{x} mod {y} = {answer}";
 
             /// 6. Create a program that calculates how much money an 
             /// employee has made based on their pay rate and the 
@@ -71,7 +85,13 @@ namespace MathOperatorsTemplate
             /// Rate of Pay: 15.25
             /// Hours Worked: 8
             /// Total Pay: 122
-            
+            double payRate = 15.25;
+            int hoursWorked = 8;
+            double totalPay = payRate * hoursWorked;
+
+            outputLabel.Text += $"\nRate of Pay: {payRate}";
+            outputLabel.Text += $"\nHours Worked: {hoursWorked}";
+            outputLabel.Text += $"\nTotal Pay: {totalPay}";
 
 
             /// 7. Create a program which calculates the tax amount for a
@@ -86,13 +106,21 @@ namespace MathOperatorsTemplate
             ///   
             /// Bill Amount: 22.5
             /// 13% Tax: 2.925             
-            
+            double billAmount = 22.50;
+            double taxRate = 0.13;
+            double taxAmount = taxRate * billAmount;
+
+            outputLabel.Text += $"\nBill Amount: {billAmount}";
+            outputLabel.Text += $"\n{taxRate*100}% Tax: {taxAmount}";
 
 
             // 8. Increment your age variable by 1 using ++ and display it
+            age++;
+            outputLabel.Text += $"\n{age}";
 
-
-            // 9. Decrement your age variable by 1 using -- and display it          
+            // 9. Decrement your age variable by 1 using -- and display it        
+            age--;
+            outputLabel.Text += $"\n{age}";
 
 
         }
